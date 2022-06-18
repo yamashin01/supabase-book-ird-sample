@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Fragment, useCallback, useState } from "react";
-import add from "public/add.jpg";
+import add from "public/add.png";
 import { client } from "src/lib/supabase";
 import { Dialog, Transition } from "@headlessui/react";
 import { Button, IconPlus, IconX } from "@supabase/ui";

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AddTitle } from "./AddTitle";
-import noImage from "public/no_image.jpg";
+import noImage from "public/no_image.png";
 
 export type Title = {
   id: number;
