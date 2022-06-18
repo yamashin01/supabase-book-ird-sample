@@ -25,13 +25,13 @@ export const TitleList = (props: TitleProps) => {
   });
 
   return (
-    <div className=" grid grid-cols-3 gap-2 m-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8">
+    <div className="grid grid-cols-3 gap-2 m-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8">
       <AddTitle uuid={props.uuid} getTitleList={props.getTitleList} />
       {filteredTitle.map((title) => {
         return (
           <Link key={title.id} href={`/title?id=${title.id}`} passHref>
             <div className="p-2 border cursor-pointer">
-              <div className=" flex justify-center">
+              <div className="flex justify-center">
                 {title.image_url ? (
                   <Image
                     src={title.image_url}
