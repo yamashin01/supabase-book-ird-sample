@@ -1,6 +1,7 @@
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AddTitle } from "./AddTitle";
+import { AddTitle } from "src/components/AddTitle";
 import noImage from "public/no_image.png";
 
 export type Title = {
@@ -11,14 +12,14 @@ export type Title = {
   image_url: string;
 };
 
-type TitleProps = {
+type TitlesProps = {
   titles: Title[];
   uuid: string;
   getTitleList: VoidFunction;
   filterText: string;
 };
 
-export const TitleList = (props: TitleProps) => {
+export const TitleList = (props: TitlesProps) => {
   const filteredTitle = props.titles.filter((title) => {
     let searchContent = title.title + " " + title.author;
     return searchContent.toLowerCase().includes(props.filterText.toLowerCase());
