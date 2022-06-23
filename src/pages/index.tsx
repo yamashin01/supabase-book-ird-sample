@@ -1,7 +1,7 @@
 import { Auth } from "@supabase/ui";
 import { useCallback, useEffect, useState } from "react";
 import { Title, TitleList } from "src/components/TitleList";
-import { getTitles } from "src/lib/supabase";
+import { getTitles } from "src/libs/supabase";
 
 const Home = () => {
   const { user } = Auth.useUser();

@@ -2,7 +2,7 @@ import { Dialog, Disclosure, Transition } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/solid";
 import { Fragment, useCallback, useState } from "react";
 import { Title } from "src/components/TitleList";
-import { client } from "src/lib/supabase";
+import { client } from "src/libs/supabase";
 import Image from "next/image";
 import noImage from "public/no_image.png";
 import { Button, IconSave, IconTrash2, IconX } from "@supabase/ui";
@@ -61,11 +61,11 @@ export const SubtitleCard = (props: Props) => {
 
   const handleSave = useCallback(async () => {
     if (volume == "" || Number(volume) == NaN) {
-      alert("Input volume as an Integer.");
+      alert("Input volume as an integer.");
       return;
     }
     if (Number(volume) < 0 || Number(volume) % 1 != 0) {
-      alert("Input volume as an Integer.");
+      alert("Input volume as an integer.");
       return;
     }
     if (isbn == "") {

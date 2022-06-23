@@ -1,8 +1,8 @@
 import { Auth, Button, IconLogOut } from "@supabase/ui";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
-import { client } from "src/lib/supabase";
-import { LayoutErrorBoundary } from "./LayoutErrorBoundary";
+import { LayoutErrorBoundary } from "src/layout/LayoutErrorBoundary";
+import { client } from "src/libs/supabase";
 
 type Props = {
   children: React.ReactNode;

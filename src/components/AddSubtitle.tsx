@@ -1,7 +1,7 @@
 import add from "public/add.png";
 import { Fragment, useCallback, useState } from "react";
 import { Title } from "src/components/TitleList";
-import { client } from "src/lib/supabase";
+import { client } from "src/libs/supabase";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import { SearchSubtitle } from "src/components/SearchSubtitle";
@@ -32,11 +32,11 @@ export const AddSubtitle = (props: Props) => {
 
   const handleAdd = useCallback(async () => {
     if (volume == "" || Number(volume) == NaN) {
-      alert("Input volume as an Integer.");
+      alert("Input volume as an integer.");
       return;
     }
     if (Number(volume) < 0 || Number(volume) % 1 != 0) {
-      alert("Input volume as an Integer.");
+      alert("Input volume as an integer.");
       return;
     }
     if (isbn == "") {

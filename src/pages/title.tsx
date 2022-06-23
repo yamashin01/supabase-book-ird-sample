@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 import { EditTitle } from "src/components/EditTitle";
 import { subtitle, SubtitleList } from "src/components/SubtitleList";
 import { Title as TitleType } from "src/components/TitleList";
-import { getSubtitles } from "src/lib/supabase";
+import { getSubtitles } from "src/libs/supabase";
 
 const Title = () => {
   const { user } = Auth.useUser();
